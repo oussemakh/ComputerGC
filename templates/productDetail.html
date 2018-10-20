@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Detail</title>
+    <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/heroic-features.css' %}" rel="stylesheet">
+     
+      <link href="https://fonts.googleapis.com/css?family=Ultra|VT323" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Faster+One|Gloria+Hallelujah|Knewave|Satisfy" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
+
+  </head>
+
+  <body>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      
+      <div class="container">
+          <nav class="navbar navbar-expand-lg   navbar-light bg-light">
+              <a class="navbar-brand" href="#"><img src="{% static 'img/logo1.png' %}" alt="logo"  width="50%" class="rounded mx-auto d-block"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navb" aria-controls="navb" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navb">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}" style="font-family: 'Sigmar One', cursive;font-size: 40px">Home</a>
+                  </li>
+                  <li class="nav-item">
+                        <a class="nav-link" href="{% url 'slearn' %}" style="font-family: 'Sigmar One', cursive;font-size: 40px">Courses</a>
+                        </li>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'product' %}" style="font-family: 'Sigmar One', cursive;font-size: 40px">Market</a>
+                      </li>
+                 
+                  <li class="nav-item">
+                      <div class="nav-item dropdown">
+                          <a class="nav-link" id="logd" role="button"   data-toggle="dropdown" aria-haspopup="true" href="#"  aria-expanded="false"style="font-family: 'Sigmar One', cursive;font-size: 40px;"> Account</a>
+                          <div class="container">
+                          <div class="dropdown-menu justify-content-center" style="width: 110%" aria-labelledby="logd">
+                          <a class="dropdown-item text-center" href="{% url 'login' %}"style="font-family: 'Sigmar One', cursive;font-size: 25px">Login</a>
+                          <a class="dropdown-item text-center" href="{% url 'logout' %}"style="font-family: 'Sigmar One', cursive;font-size: 25px">Logout</a>
+                          <a class="dropdown-item text-center" href="{% url 'signup' %}" style="font-family: 'Sigmar One', cursive;font-size: 25px">SignIn</a>
+                        </div>
+                        </div>
+                      </div>
+                     </li>
+                     
+                    
+                  
+                  </ul>
+           
+              
+              </div>
+              
+              </nav>
+      
+      
+      </div>
+ 
+     
+      <div class="container" style="margin-top:70px">
+        <div class="card"  >
+
+
+          <div class="card-body">
+            <h1 class="card-title text-center" style="font-family: 'Bevan', cursive;">{{prodd.product_name}}</h1>
+         
+            <img class="card-img-top "   src="{{prodd.product_img.url}}"  alt="img">   
+            <p class="card-text text-center"   style="margin-top:5%;font-family: 'Bevan', cursive;">{{prodd.product_discription|safe}}</p>
+            <p class="card-text " style="margin-top:5%;font-family: 'Bevan', cursive;">{{prodd.product_detail|safe}}</p>       
+            <p class="card-text " style="font-family: 'Bevan', cursive;">Quantite:{{prodd.product_quantite|safe}}</p>
+            <div class="text-center">
+            <button class="btn btn-info btn-lg" ><a class="nav-link" style="font-family: 'Bevan', cursive;color:white" href="{% url 'buy' %}">Buy</a></button>
+        </div>
+          </div>
+
+        </div>
+        <div class="container">
+        <div class="fb-comments" data-href="{{request.build_absolute_uri}}" data-numposts="5"></div>
+          </div>
+
+
+
+      </div>
+      
+      
+      
+
+  <footer >
+      <div class="container  bg-dark"style="height: 100px" >
+      
+     
+        <div class="text-center" style="padding:35px">
+        
+         <button type="button" class="btn btn-lg btn-fb pull-center" ><i class="fa fa-facebook"></i></button>
+         <button type="button" class="btn btn-lg btn-fb"><i class="fa fa-twitter"></i></button>
+         <button type="button" class="btn  btn-lg btn-fb"><i class="fa fa-instagram"></i></button>
+    
+       
+          
+          </div>
+      
+      </div>
+      
+      
+      </footer>
+   
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+     
+  </body>
+
+</html>

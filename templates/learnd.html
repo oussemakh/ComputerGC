@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="container">
+<div class="card" >
+    <div class="card mb-3" >
+            <div class="text-center" >
+        <img class="card-img-top"  style="width:40%" src="{{ldetails.img.url}}">
+    </div>
+        <div class="card-body">
+        <h2 class="card-title text-center " style="font-family: 'Spicy Rice', cursive;">{{ldetails.title}}</h2>
+        <h5 class="card-text text-center" style="font-family: 'Merienda One', cursive;">{{ldetails.disc}}</h5>
+        <p class="card-text text-center" style="font-family: 'Merienda One', cursive;">{{ldetails.body}}</p>
+        <div class="text-center">
+        <a class="btn btn-warning btn-lg" style="font-family: 'Russo One', sans-serif;
+        " href="{{ldetails.file.url}}">More</a>
+     </div>
+
+    </div>
+</div>
+</div>
+</div>
+<div class="container">
+    <div class="fb-comments" data-href="{{request.build_absolute_uri}}" data-numposts="5"></div>
+      </div>
+
+{% endblock %}

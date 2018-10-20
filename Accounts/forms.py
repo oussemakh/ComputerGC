@@ -1,0 +1,15 @@
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+
+
+
+class FormsignUp(UserCreationForm):
+    first_name = forms.CharField(max_length=100, required=False, help_text='optinal')
+    last_name = forms.CharField(max_length=100, required=False, help_text='optinal')
+    email = forms.EmailField(max_length=254, required=True, help_text='put a valid email')
+    CIN = forms.IntegerField(label="identification card",required=True)
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email', 'CIN','password1','password2',)
+
