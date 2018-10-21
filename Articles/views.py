@@ -10,7 +10,7 @@ def home(request):
     
     
 
-     user_list = Article.objects.all().order_by('Date')
+     user_list = Article.objects.all().order_by('-Date')
      page = request.GET.get('page', 1)
 
      paginator = Paginator(user_list, 6)

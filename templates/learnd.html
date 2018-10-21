@@ -18,9 +18,9 @@
         <img class="card-img-top"  style="width:40%" src="{{ldetails.img.url}}">
     </div>
         <div class="card-body">
-        <h2 class="card-title text-center " style="font-family: 'Spicy Rice', cursive;">{{ldetails.title}}</h2>
-        <h5 class="card-text text-center" style="font-family: 'Merienda One', cursive;">{{ldetails.disc}}</h5>
-        <p class="card-text text-center" style="font-family: 'Merienda One', cursive;">{{ldetails.body}}</p>
+        <h2 class="card-title text-center " style="font-family: 'Spicy Rice', cursive;">{{ldetails.title|safe}}</h2>
+        <h5 class="card-text text-center" style="font-family: 'Merienda One', cursive;">{{ldetails.disc|safe}}</h5>
+        <p class="card-text text-center" style="font-family: 'Merienda One', cursive;">{{ldetails.body|safe}}</p>
         <div class="text-center">
         <a class="btn btn-warning btn-lg" style="font-family: 'Russo One', sans-serif;
         " href="{{ldetails.file.url}}">More</a>

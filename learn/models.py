@@ -12,4 +12,4 @@ class learn(models.Model):
     img = models.ImageField(default='defualt.png', blank=True)
     file = models.FileField()
     slug2 = models.SlugField(blank=True, null=True)
-    date = models.DateField(auto_now=True)
+    date = models.DateField(auto_now=True,blank=True,null=True)

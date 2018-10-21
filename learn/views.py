@@ -7,7 +7,7 @@ from .models import learn
 
 @login_required(login_url="/nlogin")
 def see_learn(request):
-    see = learn.objects.all().order_by('date')
+    see = learn.objects.all().order_by('-date')
     page =request.GET.get('page',1)
 
     paginator = Paginator(see,6)

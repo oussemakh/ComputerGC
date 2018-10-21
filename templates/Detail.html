@@ -18,6 +18,8 @@
 
     <!-- Custom styles for this template -->
     <link href="{% static 'css/heroic-features.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ceviche+One|Merienda+One|Spicy+Rice" rel="stylesheet">
+
      
       <link href="https://fonts.googleapis.com/css?family=Ultra|VT323" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Faster+One|Gloria+Hallelujah|Knewave|Satisfy" rel="stylesheet">
@@ -47,17 +49,9 @@
                   <li class="nav-item">
                   <a class="nav-link" href="{% url 'home' %}" style="font-family: 'Sigmar One', cursive;font-size: 40px">Home</a>
                   </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link toggle-dropdown" role="button" id="navd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" style="font-family: 'Sigmar One', cursive;font-size: 40px">
-                          Courses
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navd">
-                          <a class="dropdown-item" href="#" style="font-family: 'VT323', monospace;font-size: 27px">Python</a>
-                              <a class="dropdown-item" href="#"style="font-family: 'VT323', monospace;font-size: 27px">VB</a>
-                              <a class="dropdown-item" href="#" style="font-family: 'VT323', monospace;font-size: 27px">C++</a>
-                          
-                          </div>
-                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'slearn' %}" style="font-family: 'Sigmar One', cursive;font-size: 40px">Courses</a>
+                    </li>
                   <li class="nav-item">
                       <a class="nav-link" href="{% url 'product' %}" style="font-family: 'Sigmar One', cursive;font-size: 40px">Market</a>
                       </li>
@@ -96,7 +90,7 @@
             <img class="card-img-top " style="width:80%"  src="{{articleD.pic2.url}}"  alt="img">
                 </div>
                 <h1 class="card-title text-center" style="font-family: 'Lobster', cursive;margin-top:2%;margin-bottom:2%">{{articleD.Title|safe}}</h1>
-            <p class="card-text text-center" style="margin-top:5%;font-family: 'Sigmar One', cursive;color:#3d3d3d">{{articleD.Body|safe}}</p>
+            <p class="card-text text-center" style="margin-top:5%;font-family: 'Merienda One', cursive;color:#3d3d3d">{{articleD.Body|safe}}</p>
 
           </div>
 

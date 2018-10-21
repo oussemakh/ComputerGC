@@ -7,7 +7,7 @@ class Article(models.Model):
     pic = models.ImageField(blank=True, default='default.png')
     pic2 = models.ImageField(blank=True, default='default1.png')
     slug1 = models.SlugField()
-    Date = models.DateField(auto_now=True)
+    Date = models.DateField(auto_now=True, blank=True,null=True)
 
 
 

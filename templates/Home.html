@@ -18,6 +18,8 @@
     <link href="{% static 'css/heroic-features.css' %}" rel="stylesheet">
      
       <link href="https://fonts.googleapis.com/css?family=Ultra|VT323" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Ceviche+One|Merienda+One|Spicy+Rice" rel="stylesheet">
+
       <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Faster+One|Gloria+Hallelujah|Knewave|Satisfy" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
@@ -136,7 +138,7 @@
         <div class="card" style="width:18rem">
           <img class="card-img-top"  src="{{user.pic.url}}"  alt="img">
             <div class="card-body">
-            <p class="card-text" style="font-family: 'Sigmar One', cursive"> {{ user.Disc|safe }}</p>
+            <p class="card-text" style="font-family: 'Merienda One', cursive;"> {{ user.Disc|safe }}</p>
                 <a class="btn btn-primary" style="font-family: 'Russo One', sans-serif;"href="{% url 'article_detail'  slug1=user.slug1 %}">See More</a>
             </div>
             </div>
