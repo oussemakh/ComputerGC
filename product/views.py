@@ -10,7 +10,7 @@ def product(request):
     prod = PROD.objects.all().order_by('date')
     page = request.GET.get('page',1)
 
-    paginator = Paginator(prod,1)
+    paginator = Paginator(prod,6)
     try:
         users = paginator.page(page)
     except PageNotAnInteger:

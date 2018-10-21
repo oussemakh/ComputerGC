@@ -11,20 +11,10 @@ def Resrv(request):
     if request.method == 'POST':
         form = BuyForm(request.POST)
         if form.is_valid():
-            user = form.cleaned_data
-            username =user['username']
-            email = user['email']
-            password = user['password']
-            if not(User.objects.filter(username=username).exists() or User.objects.filter(email=email).exists()):
-
-                User.objects.create_user(username, email,password)
-                user = authenticate(username=username, password=password)
-                login(request, user)
-                return redirect('home')
+            form.save()
+            return redirect('home')
            
-            else:
-                raise forms.ValidationError('Looks like a username with that email or password already exists')
-
+           
             
 
     else:

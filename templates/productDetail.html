@@ -14,9 +14,13 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
     <link href="{% static 'css/heroic-features.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ceviche+One|Merienda+One|Spicy+Rice" rel="stylesheet">
+
      
       <link href="https://fonts.googleapis.com/css?family=Ultra|VT323" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Faster+One|Gloria+Hallelujah|Knewave|Satisfy" rel="stylesheet">
@@ -85,12 +89,13 @@
 
 
           <div class="card-body">
-            <h1 class="card-title text-center" style="font-family: 'Bevan', cursive;">{{prodd.product_name}}</h1>
+            
          
             <img class="card-img-top "   src="{{prodd.product_img.url}}"  alt="img">   
-            <p class="card-text text-center"   style="margin-top:5%;font-family: 'Bevan', cursive;">{{prodd.product_discription|safe}}</p>
-            <p class="card-text " style="margin-top:5%;font-family: 'Bevan', cursive;">{{prodd.product_detail|safe}}</p>       
-            <p class="card-text " style="font-family: 'Bevan', cursive;">Quantite:{{prodd.product_quantite|safe}}</p>
+            <h1 class="card-title text-center" style="font-family: 'Spicy Rice', cursive;margin-top:2%;">{{prodd.product_name}}</h1>
+            <p class="card-text text-center"   style="margin-top:1%;font-family: 'Spicy Rice', cursive;">{{prodd.product_discription|safe}}</p>
+            <p class="card-text text-center " style="margin-top:1%;font-family: 'Merienda One', cursive;">{{prodd.product_detail|safe}}</p>       
+            <p class="card-text text-center " style="font-family: 'Bevan', cursive;">Quantite:{{prodd.product_quantite|safe}}</p>
             <div class="text-center">
             <button class="btn btn-info btn-lg" ><a class="nav-link" style="font-family: 'Bevan', cursive;color:white" href="{% url 'buy' %}">Buy</a></button>
         </div>

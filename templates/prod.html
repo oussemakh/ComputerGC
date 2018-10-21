@@ -16,7 +16,10 @@
 
     <!-- Custom styles for this template -->
     <link href="{% static 'css/heroic-features.css' %}" rel="stylesheet">
-     
+    <link href="https://fonts.googleapis.com/css?family=Ceviche+One|Merienda+One|Spicy+Rice" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
       <link href="https://fonts.googleapis.com/css?family=Ultra|VT323" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Faster+One|Gloria+Hallelujah|Knewave|Satisfy" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -73,7 +76,7 @@
      
     <hr style="margin-top:150px">
 
-  <!-- Team Members Row -->
+  <!-- Team Members Row 
   <div class="row" style="margin-top:100px">
     <div class="col-lg-12">
       <h2 class="my-4">Our Team</h2>
@@ -98,9 +101,9 @@
         <small>Web Dev</small>
       </h3>
       <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-    </div>
+    </div>--->
 
-
+<img src="{%  static 'img/market.jpg' %}" width="100%"class="rounded mx-auto d-block">
 
 </div>
      <!-- ********************************************************** -->
@@ -113,8 +116,8 @@
         <div class="card" style="width:18rem">
           <img class="card-img-top"  src="{{user.product_img.url}}"  alt="img">
             <div class="card-body">
-              <p class="card-title text-center"style="color:#00a8ff;font-size:20px;font-family: 'Knewave', cursive;">{{pro.product_name|safe}}</p>
-            <p class="card-text"style="font-family: 'Sigmar One', cursive;font-size: 16px"> {{ user.product_discription|safe }}</p>
+              <p class="card-title text-center"style="color:#00a8ff;font-size:20px;font-family: 'Lobster', cursive;">{{pro.product_name|safe}}</p>
+            <p class="card-text"style="font-family: 'Merienda One', cursive;;font-size: 16px"> {{ user.product_discription|safe }}</p>
             <p class="card-text text-center"  style="font-family: 'Faster One', cursive;font-size:32px" >{{user.product_price|safe}}DT</p>
              <div class="text-center">   
             <a class="btn btn-primary btn-lg" href="{% url 'product-detail' slug=user.slug %}">Buy</a>
