@@ -25,7 +25,7 @@ SECRET_KEY = 'p-3rsiq+p-f)5%cpyrm#jo961n+0izru%e77cfd#&70%ry7uba'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecsclub.herokuapp.com']
+ALLOWED_HOSTS = ['ecsclub.herokuapp.com','127.0.0.1']
 
 
 # Application definition
