@@ -7,7 +7,7 @@ from .models import PROD
 # Create your views here.
 @login_required(login_url="/nlogin")
 def product(request):
-    prod = PROD.objects.all()
+    prod = PROD.objects.all().order_by('date')
     page = request.GET.get('page',1)
 
     paginator = Paginator(prod,1)
