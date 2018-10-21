@@ -5,6 +5,7 @@ class Article(models.Model):
     Disc = models.CharField(max_length=400)
     Body = models.TextField()
     pic = models.ImageField(blank=True, default='default.png')
+    pic2 = models.ImageField(blank=True, default='default1.png')
     slug1 = models.SlugField()
     Date = models.DateField(auto_now=True)
 
