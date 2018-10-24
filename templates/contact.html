@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content%}
+{% load static %}
+<div class="container" >
+    <img src="{% static 'img/contatc.gif'%}" class="rounded mx-auto  d-block" width="100%" style="margin-bottom:4%">
+<div class="form-group">
+<form method='post'>
+    {% load crispy_forms_tags%}
+    {% csrf_token %}
+    {{form|crispy}}
+<div class="text-center">
+<button class="btn btn-warning btn-lg" type="submit">submit</button>
+</div>
+</form>
+
+
+</div>
+
+
+</div>
+
+{% endblock %}
