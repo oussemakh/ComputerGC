@@ -14,11 +14,7 @@ def Resrv(request):
         form = BuyForm(request.POST)
         if form.is_valid():
             form.save()
-            subject = 'thank your for using our service'
-            message = 'thank you for buying it'
-            email_from = settings.EMAIL_HOST_USER
-            recipient_list = [form.cleaned_data['email']]
-            send_mail(subject, message, email_from,recipient_list)
+            
             return redirect('home')
            
            
