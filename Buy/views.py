@@ -15,7 +15,7 @@ def Resrv(request):
         if form.is_valid():
             form.save()
             subject = 'thank your for using our service'
-            message = form.cleaned_data('product_name') + 'thank you for buying it'
+            message = 'thank you for buying it'
             email_from = settings.EMAIL_HOST_USER
             recipient_list = [form.cleaned_data['email']]
             send_mail(subject, message, email_from,recipient_list)
