@@ -10,15 +10,13 @@ def ContactView(request):
         form = contactform(request.POST)
         if form.is_valid():
             form.save()
-            subject = 'Thank you for sending a message we well replay so soon'
-            message = ' it  means a world to us '
+            subject = 'CSC'
+            message = 'Thank you for sending a message we well replay so soon'
             email_from = settings.EMAIL_HOST_USER
-            sender = request.user.email
             recipient = [form.cleaned_data['email']]
-            send_mail( subject, message, email_from, recipient )
-
-
-
+            send_mail(subject,message,email_from,recipient)
+            
+          
         return redirect('home')
 
 

@@ -13,7 +13,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             subject = 'thank you for joining us'
-            message = 'welcome to our club we hope you find it use'
+            message = 'welcome to our club we hope it helps'
             email_from = settings.EMAIL_HOST_USER
             recipient_list = [form.cleaned_data['email']] 
             send_mail(subject,message,email_from,recipient_list)
