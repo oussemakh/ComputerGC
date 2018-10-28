@@ -1,11 +1,14 @@
-{% extends 'base.html' %}
-
+{% extends 'base1.html' %}
+{% load static %}
 
 
 {% block content %}
-{% load static %}
-<img src="{% static  'img/mainm.jpg' %}" class="rounded mx-auto d-block" width="100%" style="margin-bottom:5%">
-<div class="conatiner">
+<hr>
+
+
+<div class="conatiner"style="margin-top:250px">
+<hr>
+    <div class="container">
 <div class="card-columns">
     {% for see in seel %}
     <div class="card bg-light">
@@ -15,7 +18,7 @@
             <div class="card-text text-center"style="font-family: 'Merienda One', cursive;">{{see.disc|safe}}</div>
             
             <div class="text-center" style="margin-top:4%">
-                    <a class="btn btn-primary btn-lg" style="font-family: 'Merienda One', cursive;" href="{% url 'learn-detail' slug2=see.slug2 %}"">see more</a>
+                    <a class="btn btn-primary " style="font-family: 'Merienda One', cursive;" href="{% url 'learn-detail' slug2=see.slug2 %}"">see more</a>
         </div>
     </div>
    
@@ -28,6 +31,7 @@
 </div>
 
 
+</div>
 </div>
 <div class="container">
     {% if seel.has_other_pages %}

@@ -22,7 +22,7 @@ def home(request):
         users = paginator.page(paginator.num_pages)
 
      
-     return render(request, 'Home.html', {'users':users})
+     return render(request, 'Home1.html', {'users':users})
 
 @login_required(login_url="/nlogin")
 def detail(request, slug1):
