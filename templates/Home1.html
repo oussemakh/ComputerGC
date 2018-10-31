@@ -313,7 +313,7 @@
     </div>
 </section>
 
-<section class="features18 popup-btn-cards cid-r7IhoQVCIP" id="features18-5">
+<section class="features18 popup-btn-cards cid-r7IhoQVCIP" id="features18-5" >
 
     
 
@@ -323,44 +323,33 @@
 <div>― Peter Morville</div></h2>
         <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light"></h3>
         
-        <div class="container" style="margin-top:250px;margin-bottom:150px">
+        <div class="container">
     
                 <hr>
-                      <div class="card-columns">
-                          <div class="container">
+                      <div class="card-columns "  >
                       
                           {% for user in users %}
                         
                     <div class="card" style="width:18rem">
                       <img class="card-img-top"  src="{{user.pic.url}}"  alt="img">
-                        <div class="card-body bg-light">
+                        <span class="card-body bg-light">
                         <p class="card-text" style="font-family: 'Merienda One', cursive;"> {{ user.Disc|safe }}</p>
                             <a class="btn btn-primary" style="font-family: 'Russo One', sans-serif;"href="{% url 'article_detail'  slug1=user.slug1 %}">See More</a>
-                        </div>
-                        </div>
+                        </span>
+                    </div>
                         {% endfor %}
-                       
+                       </div>
               
+                 </div>
                         
                         
-                 
+           </div>     
                       
             
                           
-                  </div>
                   
-        </div>
-                    </div>
-                
-                </div>
-            
-           
-            
-
-           
-            
-        </div>
-    </div>
+                  
+        
     <div class="container" style="margin-top:3%">
             {% if users.has_other_pages %}
             <ul class="pagination justify-content-center">
@@ -382,10 +371,12 @@
                 <li class="disabled page-item"><span class="page-link">&raquo;</span></li>
               {% endif %}
             </ul>
-          {% endif %}
-</section>
+      
+            {% endif %}
+</div>
+        </section>
 
-<section class="accordion1 cid-r7LdJ8liRy" id="accordion1-g">
+<section class="accordion1 cid-r7LdJ8liRy" id="accordion1-g" >
 
     
 
