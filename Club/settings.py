@@ -87,11 +87,14 @@ WSGI_APPLICATION = 'Club.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'h.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'CGC',
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': 'cgclb.herokuapp.com',
+        'PORT': '5432',
     }
 }
 import dj_database_url
